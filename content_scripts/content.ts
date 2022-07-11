@@ -164,6 +164,8 @@ function replaceCountryCode(countryCode) {
             return "バレンツ海";
         case "ADR":
             return "アドリア海";
+        case "ENG":
+            return "イングランド海"
         case "Yor":
             return "ヨークシャー";
         case "Lvn":
@@ -176,7 +178,6 @@ function f(n) {
     var tspanCollection = n.getElementsByTagName("tspan");
     var tspanCollectionLength = tspanCollection.length;
     for (var i = 0; i < tspanCollectionLength; i++) {
-        console.debug(tspanCollection[i]);
         tspanCollection[i].innerHTML = replaceCountryCode(tspanCollection[i].innerHTML);
     }
 }
